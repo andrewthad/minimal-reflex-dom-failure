@@ -1,0 +1,25 @@
+name: minimal-reflex-dom-failure
+version: 0.2
+synopsis: Frontend to a SIEM
+license: MIT
+license-file: LICENSE
+author: Andrew Martin
+maintainer: amartin@layer3com.com
+copyright: Layer 3 Communications
+category: Network
+build-type: Simple
+extra-source-files: ChangeLog.md
+cabal-version: >=1.10 
+
+executable minimal-reflex-dom-failure
+  main-is: Main.hs
+  build-depends:
+      base >= 4.11 && < 5
+    , reflex
+    , reflex-dom
+    , text
+  hs-source-dirs: .
+  if impl(ghcjs)
+    ghcjs-options: -dedupe
+    cpp-options:   -DGHCJS_BROWSER
+  default-language: Haskell2010

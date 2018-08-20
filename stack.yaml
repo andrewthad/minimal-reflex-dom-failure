@@ -1,0 +1,44 @@
+compiler: 'ghcjs-0.2.0.9011009_ghc-8.4.1'
+setup-info:
+  ghcjs:
+    source:
+      ghcjs-0.2.0.9011009_ghc-8.4.1:
+        url: 'https://github.com/alexanderkjeldaas/ghcjs/releases/download/fghcjs-8.4.1/ghcjs.tar.gz'
+flags: {}
+extra-package-dbs: []
+packages: ['.']
+extra-deps:
+- ref-tf-0.4.0.1
+- chronos-1.0.4
+- zenc-0.1.1
+- gi-webkit2-4.0.19
+- gi-soup-2.4.16
+- git: 'https://github.com/gtk2hs/webkit-javascriptcore'
+  commit: '70fa72116d6f5a7546ce63a8f27bd9b91aeb34f0'
+- git: 'https://github.com/haskell-gi/haskell-gi'
+  commit: '4861d21cea532a4abd8d988c32ee30b35403eb7c'
+- git: 'https://github.com/reflex-frp/reflex'
+  commit: 'ae6b5999fd2305f83cd573788598e262cc07733b'
+- git: 'https://github.com/ghcjs/jsaddle-dom'
+  commit: '6ba167147476adebe7783e1521591aa3fd13da28'
+- git: 'https://github.com/reflex-frp/reflex-dom'
+  commit: '4a65735dab7cc23962621a536fef4aaf983b3881'
+  subdirs: [reflex-dom,reflex-dom-core]
+- git: 'https://github.com/ghcjs/jsaddle'
+  commit: 'b423436565fce7f69a65d843c71fc52dc455bf54'
+  subdirs: [jsaddle,jsaddle-webkit2gtk]
+- git: 'https://github.com/ghcjs/ghcjs-dom'
+  commit: 'd17a8078b05e7b06dc2ad5553016181c20bd2f83'
+  subdirs: [ghcjs-dom,ghcjs-dom-jsaddle,ghcjs-dom-jsffi]
+- git: 'https://github.com/andrewthad/colonnade'
+  commit: 'd17193baae256f3617f91b33d5c54bc4678a18ad'
+  subdirs: [reflex-dom-colonnade]
+- git: 'https://github.com/haskell-trasa/trasa'
+  commit: 'a291b92edd09db66430866346d9a26ffdc6185f8'
+  subdirs: [trasa,trasa-reflex]
+- git: 'https://github.com/ghcjs/ghcjs-base'
+  commit: '01014ade3f8f5ae677df192d7c2a208bd795b96c'
+- git: 'https://github.com/haskell/primitive'
+  commit: '66c4fba2a32d5b4c37c95943f6842ad0421b4f4e'
+resolver: nightly-2018-08-17
+allow-newer: true
